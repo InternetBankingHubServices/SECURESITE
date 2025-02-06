@@ -3,48 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GOV.UK Style Page</title>
+  <title>Tell DVLA - Motor Trader</title>
   <style>
     body {
-      font-family: "GDS Transport", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: white;
+      background-color: #fff;
     }
     .top-banner {
-      display: flex;
-      align-items: center;
       background-color: #0b0c0c;
+      color: white;
       padding: 10px 20px;
-      color: white;
       font-weight: bold;
-    }
-    .logo {
-      flex: 1;
-    }
-    .divider {
-      margin: 0 10px;
-      color: white;
-    }
-    .menu, .search-icon {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+    }
+    .top-banner-logo {
+      font-size: 18px;
+    }
+    .menu-section {
+      display: flex;
+      align-items: center;
+    }
+    .menu-text {
+      margin-right: 15px;
+    }
+    .search-icon {
+      width: 16px;
+      height: 16px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg') no-repeat center center;
+      background-size: contain;
+      display: inline-block;
     }
     .aqua-banner {
       background-color: #1d70b8;
-      padding: 3px;
-      margin: 0 15px;
-      text-align: center;
-      color: white;
-      font-weight: bold;
+      height: 8px;
+      margin: 0 20px;
     }
     .breadcrumb {
-      color: #6f777b;
       padding: 10px 20px;
       font-size: 14px;
+      color: #6f777b;
     }
     .breadcrumb a {
-      color: #1d70b8;
+      color: #6f777b;
       text-decoration: none;
     }
     .breadcrumb a:hover {
@@ -52,38 +56,40 @@
     }
     .section-title {
       font-size: 24px;
-      color: #0b0c0c;
       font-weight: bold;
       padding: 20px 20px 10px;
     }
     .section-text {
-      font-size: 16px;
-      color: #0b0c0c;
       padding: 0 20px 10px;
+      font-size: 16px;
     }
     ul {
-      padding-left: 40px;
-      margin-bottom: 20px;
-    }
-    ul li {
+      padding: 0 40px 20px;
       list-style: disc;
-      margin: 5px 0;
     }
     .circle-button {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .circle-button input[type="radio"] {
+      appearance: none;
       border: 2px solid #0b0c0c;
       border-radius: 50%;
-      vertical-align: middle;
+      width: 32px;
+      height: 32px;
       margin-right: 10px;
+      cursor: pointer;
+    }
+    .circle-button input[type="radio"]:checked {
+      background-color: #0b0c0c;
     }
     .next-step-banner {
       background-color: #00703c;
       color: white;
       text-align: center;
-      padding: 10px;
-      margin: 20px 20px;
+      padding: 15px;
+      margin: 20px;
       font-weight: bold;
       text-decoration: none;
       display: block;
@@ -91,23 +97,16 @@
     .next-step-banner:hover {
       background-color: #005a30;
     }
-    .feedback-box {
-      padding: 10px 20px;
+    .footer {
       background-color: #f3f2f1;
-      margin: 20px 20px;
-      font-size: 16px;
-    }
-    .footer-links {
       padding: 20px;
-      background-color: #f3f2f1;
+      border-top: 1px solid #d5d5d5;
     }
-    .footer-links a {
-      display: block;
+    .footer a {
       color: #1d70b8;
       text-decoration: none;
-      margin: 5px 0;
     }
-    .footer-links a:hover {
+    .footer a:hover {
       text-decoration: underline;
     }
   </style>
@@ -115,11 +114,11 @@
 <body>
   <!-- Top banner -->
   <div class="top-banner">
-    <div class="logo">GOV.UK</div>
-    <div class="divider">|</div>
-    <div class="menu">Menu <span class="menu-arrow">▼</span></div>
-    <div class="divider">|</div>
-    <div class="search-icon">🔍</div>
+    <div class="top-banner-logo">GOV.UK</div>
+    <div class="menu-section">
+      <div class="menu-text">Menu ▼</div>
+      <div class="search-icon"></div>
+    </div>
   </div>
 
   <!-- Aqua banner -->
@@ -130,10 +129,7 @@
     <a href="#">Home</a> > <a href="#">Buy, sell or scrap a vehicle</a>
   </div>
 
-  <!-- Section Text -->
-  <div class="section-text">Tell DVLA you've sold, transferred or bought a vehicle</div>
-
-  <!-- Section Title -->
+  <!-- Section title and text -->
   <div class="section-title">1. Are you a motor trader?</div>
   <div class="section-text">A motor trader can be any of the following:</div>
 
@@ -147,30 +143,36 @@
     <li>car buying service</li>
   </ul>
 
-  <!-- Circle Buttons -->
-  <div class="section-text">
-    <label><span class="circle-button"></span> Yes</label><br>
-    <label><span class="circle-button"></span> No</label>
+  <!-- Radio buttons -->
+  <div class="section-text">Please select an option:</div>
+  <div class="circle-button">
+    <input type="radio" id="yes" name="motor-trader" value="yes">
+    <label for="yes">Yes</label>
+  </div>
+  <div class="circle-button">
+    <input type="radio" id="no" name="motor-trader" value="no">
+    <label for="no">No</label>
   </div>
 
-  <!-- Next Step Banner -->
+  <!-- Next step button -->
   <a href="#" class="next-step-banner">Next step</a>
 
-  <!-- Feedback Box -->
-  <div class="feedback-box">
-    <strong>Is this page useful?</strong><br>
-    <label><span class="circle-button"></span> Yes</label><br>
-    <label><span class="circle-button"></span> No</label>
-  </div>
-
-  <!-- Footer Links -->
-  <div class="footer-links">
-    <a href="#">Crime</a>
-    <a href="#">Justice</a>
-    <a href="#">Law</a>
-    <a href="#">Childcare & Parenting</a>
-    <a href="#">Citizenship</a>
-    <a href="#">More...</a>
+  <!-- Footer -->
+  <div class="footer">
+    <h3>Services and information</h3>
+    <a href="#">Benefits</a><br>
+    <a href="#">Births, deaths, marriages and care</a><br>
+    <a href="#">Business and self-employed</a><br>
+    <a href="#">Childcare and parenting</a><br>
+    <a href="#">Citizenship and living in the UK</a><br>
+    <a href="#">Crime, justice and the law</a><br>
+    <h3>Government activity</h3>
+    <a href="#">Departments</a><br>
+    <a href="#">News</a><br>
+    <a href="#">Guidance and regulation</a><br>
+    <a href="#">Research and statistics</a><br>
+    <a href="#">Policy papers and consultations</a><br>
+    <a href="#">Transparency</a><br>
   </div>
 </body>
 </html>
