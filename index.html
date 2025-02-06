@@ -1,165 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOV.UK - Services and Information</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 24px;
-            color: #333;
-        }
-        .breadcrumb {
-            font-size: 14px;
-            color: #666;
-        }
-        .breadcrumb a {
-            text-decoration: none;
-            color: #005ea5;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            margin-top: 20px;
-        }
-        .content h2 {
-            font-size: 20px;
-            color: #333;
-        }
-        .content p {
-            font-size: 16px;
-            color: #333;
-        }
-        .content ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        .content ul li {
-            font-size: 16px;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-        }
-        .footer a {
-            color: #005ea5;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .top-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black;
+      padding: 10px;
+      color: white;
+    }
+    .top-banner div {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      font-weight: bold;
+    }
+    .divider {
+      margin: 0 10px;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+    .menu-arrow {
+      margin-left: 5px;
+    }
+    .aqua-banner {
+      background-color: aqua;
+      padding: 5px;
+      margin: 0 10%;
+      text-align: center;
+    }
+    .breadcrumb {
+      color: grey;
+      padding: 10px;
+      font-size: 14px;
+    }
+    .section-title {
+      font-size: 18px;
+      color: black;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+    .section-text {
+      font-size: 14px;
+      color: black;
+      padding: 0 10px;
+    }
+    ul {
+      padding-left: 30px;
+    }
+    ul li {
+      list-style: none;
+      padding: 5px 0;
+    }
+    .circle-button {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 10px auto;
+      border: 2px solid black;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .circle-button.selected {
+      background-color: black;
+      color: white;
+    }
+    .next-step-banner {
+      background-color: #6abf69;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin: 20px 10%;
+      font-weight: bold;
+      text-decoration: none;
+      display: block;
+    }
+    .feedback-box {
+      padding: 10px;
+      background-color: #e0e0e0;
+      margin: 20px 10%;
+    }
+    .feedback-box span {
+      font-weight: bold;
+    }
+    .footer-links {
+      padding: 20px 10px;
+    }
+    .footer-links a {
+      display: block;
+      color: grey;
+      text-decoration: none;
+      padding: 5px 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="#">Home</a> &gt; <a href="#">Driving and transport</a> &gt; <a href="#">Buy, sell or scrap a vehicle</a>
-        </div>
-        <div class="content">
-            <h1>Tell DVLA you've sold, transferred or bought a vehicle</h1>
-            <h2>1. Are you a motor trader?</h2>
-            <p>A motor trader can be any of the following:</p>
-            <ul>
-                <li>motor dealer</li>
-                <li>motor auctioneer</li>
-                <li>salvage dealer</li>
-                <li>finance or insurance company</li>
-                <li>fleet operator</li>
-                <li>car buying service</li>
-            </ul>
-        </div>
+  <!-- Top banner -->
+  <div class="top-banner">
+    <div class="logo">LOGO</div>
+    <div class="divider">|</div>
+    <div class="menu">Menu <span class="menu-arrow">▼</span></div>
+    <div class="divider">|</div>
+    <div class="search-icon">🔍</div>
+  </div>
 
-        <div class="content">
-            <h1>Services and information</h1>
-            <table>
-                <tr>
-                    <th>Benefits</th>
-                    <th>Education and learning</th>
-                    <th>Departments</th>
-                </tr>
-                <tr>
-                    <td>Births, death, marriages and care</td>
-                    <td>Employing people</td>
-                    <td>News</td>
-                </tr>
-                <tr>
-                    <td>Business and self-employed</td>
-                    <td>Environment and countryside</td>
-                    <td>Guidance and regulation</td>
-                </tr>
-                <tr>
-                    <td>Childcare and parenting</td>
-                    <td>Housing and local services</td>
-                    <td>Research and statistics</td>
-                </tr>
-                <tr>
-                    <td>Citizenship and living in the UK</td>
-                    <td>Money and tax</td>
-                    <td>Policy papers and consultations</td>
-                </tr>
-                <tr>
-                    <td>Crime, justice and the law</td>
-                    <td>Passports, travel and living abroad</td>
-                    <td>Transparency</td>
-                </tr>
-                <tr>
-                    <td>Disabled people</td>
-                    <td>Visas and immigration</td>
-                    <td>How government works</td>
-                </tr>
-                <tr>
-                    <td>Driving and transport</td>
-                    <td>Working, jobs and pensions</td>
-                    <td>Get involved</td>
-                </tr>
-            </table>
-        </div>
+  <!-- Aqua banner -->
+  <div class="aqua-banner">Aqua Blue Banner</div>
 
-        <div class="footer">
-            <p>
-                <a href="#">Help</a> | 
-                <a href="#">Privacy</a> | 
-                <a href="#">Cookies</a> | 
-                <a href="#">Accessibility statement</a> | 
-                <a href="#">Contact</a> | 
-                <a href="#">Terms and conditions</a>
-            </p>
-            <p>Rhestr o Wasanaethau Cymraeg | Government Digital Service</p>
-            <p><strong>OCL</strong></p>
-            <p>All content is available under the Open Government Licence</p>
-        </div>
-    </div>
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="#">HOME</a> > <a href="#">BUY, SELL or scrap a vehicle</a>
+  </div>
+
+  <!-- Section Text -->
+  <div class="section-text">Tell DVLA you’ve sold, transferred or bought a vehicle</div>
+
+  <!-- Section Title -->
+  <div class="section-title">1. Are you a motor trader?</div>
+  <div class="section-text">A motor trader can be any of the following:</div>
+
+  <!-- List -->
+  <ul>
+    <li>. motor dealer</li>
+    <li>. motor auctioneer</li>
+    <li>. salvage dealer</li>
+    <li>. finance or insurance company</li>
+    <li>. fleet operator</li>
+    <li>. car buying service</li>
+  </ul>
+
+  <!-- Circle Buttons -->
+  <div class="circle-button" onclick="selectButton(this)">YES</div>
+  <div class="circle-button" onclick="selectButton(this)">NO</div>
+
+  <!-- Next Step Banner -->
+  <a href="#" class="next-step-banner">NEXT STEP</a>
+
+  <!-- Feedback Box -->
+  <div class="feedback-box">
+    <span>Is this page useful?</span><br>
+    <div class="circle-button" onclick="selectButton(this)">Yes</div>
+    <div class="circle-button" onclick="selectButton(this)">No</div>
+  </div>
+
+  <!-- Report a Problem -->
+  <div class="section-text">Report a problem with this page</div>
+
+  <!-- Footer Links -->
+  <div class="footer-links">
+    <a href="#">Crime</a>
+    <a href="#">Justice</a>
+    <a href="#">Law</a>
+    <a href="#">Childcare & Parenting</a>
+    <a href="#">Citizenship</a>
+    <a href="#">More...</a>
+  </div>
+
+  <script>
+    function selectButton(button) {
+      // Deselect all buttons
+      const buttons = document.querySelectorAll('.circle-button');
+      buttons.forEach(btn => btn.classList.remove('selected'));
+      // Select the clicked button
+      button.classList.add('selected');
+    }
+  </script>
 </body>
 </html>
+
